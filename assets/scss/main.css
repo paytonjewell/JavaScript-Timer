@@ -2,7 +2,8 @@ body {
   font-family: 'Helvetica', sans-serif;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#a18cd1), to(#fbc2eb));
   background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .app {
@@ -10,6 +11,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -55,5 +57,10 @@ button {
 button:hover {
   -webkit-box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
           box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+}
+
+p {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
 }
 /*# sourceMappingURL=main.css.map */
