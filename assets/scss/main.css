@@ -1,5 +1,7 @@
 body {
   font-family: 'Helvetica', sans-serif;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#a18cd1), to(#fbc2eb));
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
 
 .app {
@@ -38,7 +40,7 @@ body {
 .buttons {
   text-align: center;
   padding: 2em 1em;
-  background: #e5e5e5;
+  background: #e5e5e5c0;
   border-top: 10px solid white;
   border-radius: 0 0 25px 25px;
 }
