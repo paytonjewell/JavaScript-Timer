@@ -1,55 +1,71 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: 'Helvetica', sans-serif;
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
     background-attachment: fixed;
     background-size: cover;
+    font-size: 5em;
+}
+
+.row {
+    height: 100vh;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
 }
 
 .app {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
-.timer {
-    text-align: center;
-    padding: 1em;
-    color: #f3f3f3;
-    background: rgba(0,0,0,0.8);
-    font-size: 7vw;
-    border-radius: 25px 25px 0 0;
-}
-
-.stopwatch {
+    padding: 0.02em;
     box-shadow: 1vh 1vh 1vh rgba(0,0,0,0.3);
     border-radius: 25px;
 }
 
-.buttons {
-    text-align: center;
-    padding: 2em 1em;
-    background: #e5e5e5c0;
-    border-top: 10px solid white;
-    border-radius: 0 0 25px 25px;
+.timer {
+    background: rgba(0,0,0,0.8);
+    padding: 1em;
+    color: #f3f3f3;
+    border-radius: 25px 25px 0 0;
 }
 
+.buttons {
+    background: #e5e5e5c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border-radius: 0 0 25px 25px;
+    border-top: 3px solid white;
+}
 
 button {
-    margin: 1em 2em;
+    margin: 0 2em;
     padding: 1em;
     border-radius: 25px;
-    font-size: 2vw;
+    border: 3px solid rgba(0,0,0,0.5);
+
 }
 
-button:hover {
-    box-shadow: .2em .2em .2em rgba(0,0,0,0.3);
-}
-
-p {
-    text-align: center;
-    color: rgba(0,0,0,0.7);
-}
+@media only screen and (max-width: 1024px) {
+    body {
+        font-size: 3em;
+    }
+    .app {
+        width: 80%;
+    }
+    button {
+        font-size: .25em;
+    }
+  }

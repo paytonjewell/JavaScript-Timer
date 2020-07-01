@@ -10,21 +10,18 @@ resetButton.disabled = true;
 stopButton.disabled = true;
 
 startButton.addEventListener("click", function () {
-    timer = setInterval(TimerHandler, 1000);
+    timer = setInterval(startTime, 1000);
     startButton.disabled = true;
     stopButton.disabled = false;
     resetButton.disabled = false;
-});
+})
 
-
-
-stopButton.addEventListener("click", function () {
+stopButton.addEventListener("click", function() {
     timer = clearInterval(timer);
     startButton.disabled = false;
-});
+})
 
-
-resetButton.addEventListener("click", function () {
+resetButton.addEventListener("click", function() {
     timer = clearInterval(timer);
     sec = 0;
     min = 0;
@@ -35,38 +32,35 @@ resetButton.addEventListener("click", function () {
     resetButton.disabled = true;
 })
 
+function startTime() {
+    sec++;
+    if(sec == 60) {
+        sec = 0;
+        min++;
+    }
+    if(min == 60) {
+        min = 0;
+        hour++;
+    }
 
-function TimerHandler () {
-sec++;
 
-if(sec == 60) {
-    sec = 0;
-    min++;
+displayTime();
 }
 
-if(min == 60) {
-    min = 0;
-    hour++;
-}
-
-DisplayTime();
-
-}
-
-
-function DisplayTime () {
+function displayTime() {
     let secPretty = sec;
     let minPretty = min;
     let hourPretty = hour;
-  if (sec < 10) {
-      secPretty = "0" + sec;
-  } 
-  if (min < 10) {
-      minPretty = "0" + min;
-  } 
-  if (hour < 10) {
-      hourPretty = "0" + hour;
-  } 
-  
+    if (sec < 10) {
+        secPretty = "0" + sec;
+    }
+    if (min < 10) {
+        minPretty = "0" + min;
+    }
+    if (hour < 10) {
+        hourPretty = "0" + hour;
+    }
     timerElement.innerHTML = `${hourPretty} : ${minPretty} : ${secPretty}`;
 }
+
+
