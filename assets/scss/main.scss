@@ -55,7 +55,7 @@ button {
     padding: 1em;
     border-radius: 25px;
     border: 3px solid rgba(0,0,0,0.5);
-
+    
 }
 
 @media only screen and (max-width: 1024px) {
@@ -68,4 +68,16 @@ button {
     button {
         font-size: .25em;
     }
-  }
+}
+
+p {
+    font-size: 0.2em;
+    text-align: center;
+    padding-bottom: .5em;
+}
+
+p a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
